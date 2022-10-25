@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Loja Virtual </title>
+    <meta name="description" content="Venha comprar com inovação os melhores produtos em alta no mercado de celulares! ">
+    <meta name="keywords" content="">
+
+    <link rel="icon" type="image/jpeg" sizes="20x20"
+        href="images/icon.jpeg">
+    
+
+
+<body data-ng-app="buy" id="buy" data-ng-controller="mainController">
+
+    <div class="techmarket">
+        <div class="techmarket__about">
+
+                        <h1 data-ng-cloak class="techmarket__about--title">Compre aqui com a Tech Market, 
+                            melhores preços e atendimento online personalizado.
+                            <hr/>
+                            <img class="imf" src="images/Market-PNG-Image-HD.png" ></h1>
+                    </div>
+                </div>
+                        <div class="techmarket__buy--pricing">
+                            <div class="tab-content">
+                                            <img class="ims" src="./images/iphone14.webp">
+                                            <h1 class="techmarket__buy--pricing-card__header--amount"><span>R$
+                                                    {{content.amounts.monthly[0].value}},00</span>/total</h1>
+                                            <h4 class="techmarket__buy--pricing-card__header--equivalence">
+                                                R${{content.amounts.monthly[0].parc}}/mês</h4>
+                                        
+                                        <div class="techmarket__buy--pricing-card__body">
+                                            <p class="techmarket__buy--pricing-card__body--description">
+                                                {{content.amounts.monthly[0].caption}}</p>
+                                        </div> 
+
+                                        <div class="techmarket__buy--pricing-card__footer">
+                                            <div class="techmarket__buy--pricing-card__footer--btn">
+                                                <a href=""
+                                                    data-ng-click="payment.setAmount(content.amounts.monthly[0].value)"></a>
+                                            </div>
+                                        </div>
+                                    <!-- </div> -->
+
+                                    <div class="techmarket__buy--pricing-card">
+                                        <div class="techmarket__buy--pricing-card__header">
+                                            <img class="ims" src="./images/minote10.jpg"> 
+                                            <h1 class="techmarket__buy--pricing-card__header--amount"><span>R$
+                                                    {{content.amounts.monthly[1].value}},00</span>/total</h1>
+                                            <h4 class="techmarket__buy--pricing-card__header--equivalence">
+                                                R${{content.amounts.monthly[1].parc}}/mês</h4>
+                                        </div>
+                                        <div class="techmarket__buy--pricing-card__body">
+                                            <p class="techmarket__buy--pricing-card__body--description">
+                                                {{content.amounts.monthly[1].caption}}</p>
+                                        </div>
+                                        <div class="techmarket__buy--pricing-card__footer">
+                                            <div class="techmarket__buy--pricing-card__footer--btn">
+                                                <a href=""
+                                                    data-ng-click="payment.setAmount(content.amounts.monthly[1].value)"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="techmarket__buy--pricing-card">
+                                        <div class="techmarket__buy--pricing-card__header">
+                                            <img class="ims" src="./images/galaxym53.webp">
+                                            <h1 class="techmarket__buy--pricing-card__header--amount"><span>R$
+                                                    {{content.amounts.monthly[2].value}},00</span>/total</h1>
+                                            <h4 class="techmarket__buy--pricing-card__header--equivalence">
+                                                R${{content.amounts.monthly[2].parc}}/mês</h4>
+                                        </div>
+                                        <div class="techmarket__buy--pricing-card__body">
+                                            <p class="techmarket__buy--pricing-card__body--description">
+                                                {{content.amounts.monthly[2].caption}}</p>
+                                        </div>
+                                        <div class="techmarket__buy--pricing-card__footer">
+                                            <div class="techmarket__buy--pricing-card__footer--btn">
+                                                <a href=""
+                                                    data-ng-click="payment.setAmount(content.amounts.monthly[2].value)"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="amounts-end"></div>
+                    <div class="techmarket__form" id="form">
+                        <form name="contactForm" action="mailto:d2019012251@unifei.edu.br" method="post" novalidate accept-charset="UTF-8">
+                            <input type="hidden" name="VALID" value="{{contactForm.$valid}}" />
+                            <div class="techmarket__form--card">
+                                <h2 class="techmarket__form--card-title">Preencha e aguarde nosso contato!</h2>
+
+                                <div class="form-group">
+                                    <input data-ng-model="form.firstname" data-ng-pattern="/^[^\d]+$/" required
+                                        type="text" placeholder=" ">
+                                    <label>Nome*</label>
+                                </div>
+                                <div class="form-group">
+                                    <input data-ng-model="form.lastname" data-ng-pattern="/^[^\d]+$/" required
+                                        type="text" placeholder=" ">
+                                    <label>Sobrenome*</label>
+                                </div>
+
+                                <div class="form-group">
+                                    <input data-ng-model="form.email"
+                                        data-ng-pattern="/^(?:[\w!#$%&'*+/=?^`{|}~-]+\.)*[\w!#$%&'*+/=?^`{|}~-]+@(?:[\w-]+\.)*[\w-]+\.\w{2,}$/"
+                                        required type="text" placeholder=" ">
+                                    <label>Email para contato*</label>
+                                </div>
+                                <div class="form-group">
+                                    <input data-ng-model="form.phone" data-ng-pattern="/^[^\d]+$/" required
+                                    type="text" placeholder=" ">
+                                    <label>Celular que deseja comprar*</label>
+                                </div>
+
+                                <p class="error-message">*Preencha todos os campos obrigatórios.</p>
+                            </div>
+
+                        </form>
+                        <form id="forms" name="contactForm" action="mailto:d2019012251@unifei.edu.br" 
+                        method="post" novalidate accept-charset="UTF-8">
+
+                            <input data-ng-repeat="(pkey,pdata) in iterateCustomFields({
+                            'device' : mobileOrWeb() })" type="hidden" name="{{pkey}}" value="{{pdata}}" />
+
+                            <input type="hidden" name="Nome do Cliente" value="{{form.firstname}} {{form.lastname}} gostaria de comprar um {{form.phone}}, email para contato : {{form.email}}"/>
+                    
+                            <div class="techmarket__form--agreements">
+                                <div class="techmarket__form--agreements-checkbox">
+                                    <input data-ng-model="form.subscribe" type="checkbox" name="ACCEPT_EMAILS"
+                                        id="newsletter">
+                                    <label for="newsletter">Quero receber as comunicações da techmarket, promoções e novidades!</label>
+                                </div>
+                                <div class="techmarket__form--agreements-checkbox">
+                                    <input type="checkbox" id="acceptDonorPolicy">
+                                    <label for="acceptDonorPolicy">Declaro que li e aceito a</label> <span
+                                        style="padding-left: 38px; color:#666666">a
+                                        <a href="{{policyUrl}}" target="_blank">Política de Privacidade</a></span>
+                                </div>
+                            </div>
+
+                            <input class="techmarket__form--btn" data-ng-disabled="posting" type="submit"
+                                value="Compre agora">
+
+                        </form>
+        
+        </div>
+    </div>
+
+    <script
+        src="https://6d822aea659b49ec1106-651bbca9f5835752fa28f921d9802238.ssl.cf1.rackcdn.com/v3/js/vendors.min.js"></script>
+    <script type="text/javascript">
+
+        var pageContent = {
+            amounts: {
+                monthly: [
+                    { value: 6840 , parc: '569.92', caption: "IPhone 14 - 128GB - Cor: Meia-noite" },
+                    { value: 2499, parc: '208.25', caption: "Smartphone Xiaomi Mi Note 10 - 128GB 6GB RAM - Cor: Verde" },
+                    { value: 1799, parc: '149.92', caption: "Smartphone Samsung Galaxy M53 - 128GB 8GB RAM - Cor: Azul" }
+                ]
+            }
+        }
+
+     
+    </script>
+
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
